@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <Windows.h>
+#define N 6
+
+int func(int a[])
+{
+	int count = 0;
+
+	for(int i = N-1; i > 0; i--)
+	{
+		if(a[i] < 0)
+		{
+			 count = count + 1; 
+		}
+
+		if(count == 2)
+		{
+			return a[i];
+		}
+	}
+}
+
+int main()
+{
+	system("chcp 65001");
+	system("cls");
+
+	int a[N] = {1, 3, 4, 6, -2, -6};
+	int x = func(a);
+
+	printf("%d\n", x);	
+	
+
+system("pause");
+return 0;
+}
