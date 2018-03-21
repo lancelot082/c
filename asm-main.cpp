@@ -2,8 +2,9 @@
 int n_a, n_b, n_c = 0;
 long int numerator, denominator, result = 0;
 
-extern "C" {void Lab1(void);}
+extern "C" {void lab1ub(void);}
 
+// Lab1 - Unsigned byte
 // (-74/n_a+n_c-5)/(1+n_c*n_b/2);
 
 void F_C(void);
@@ -23,17 +24,17 @@ int main(void) {
 }
 
 void F_C(void) {
-	numerator = (-74/num_a+num_c-5);
-	denominator = (1+num_c*num_b/2);
-	result =  numerator / denumerator;
+	numerator = (-74/n_a+n_c-5);
+	denominator = (1+n_c*n_b/2);
+	result =  numerator / denominator;
 	cout << "C++: numerator		= " << numerator << "\n";
 	cout << "C++: denominator 	= " << denominator << "\n";
 	cout << "C++: result		= " << result << "\n";
 }
 
 void F_ASM(void) {
-	Lab1();
-	result = numerator / denumerator;
+	lab1ub();
+	result = numerator / denominator;
 	cout << "ASM: numerator		= " << numerator << "\n";
 	cout << "ASM: denominator 	= " << denominator << "\n";
 	cout << "ASM: result		= " << result << "\n";
